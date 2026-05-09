@@ -28,7 +28,7 @@ quarto render
 
 ## Deployment
 
-Automatically deployed via GitHub Actions on push to `main`.
+Automatically deployed via GitHub Actions when changes land on `main` (via PR — direct pushes to `main` are blocked by branch protection).
 
 ---
 
