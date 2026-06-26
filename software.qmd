@@ -73,8 +73,10 @@ medci(mu.x = 0.5, mu.y = 0.3,
 
 ## Other Tools
 
+- [**atlas**](https://github.com/Data-Wise/atlas) — Project state engine: a research registry (`kind`/`target`/`tasks` parsed from `.STATUS`) with `atlas doctor` settings-contract auditing and a research-safe sync
+- [**obsidian-cli-ops**](https://github.com/Data-Wise/obsidian-cli-ops) — Obsidian vault automation; renders a research board from the atlas registry into the vault
 - [**emacs-r-devkit**](https://github.com/Data-Wise/emacs-r-devkit) — Emacs configuration for R development
-- [**docs-standards**](https://github.com/Data-Wise/docs-standards) — Shared documentation standards
+- [**docs-standards**](https://github.com/Data-Wise/docs-standards) — Shared documentation standards + ADRs (research-ops ecosystem ownership)
 
 ---
 
