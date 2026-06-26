@@ -1,0 +1,41 @@
+---
+title: "Research-Ops Platform"
+subtitle: "From a .STATUS file to a live research board"
+---
+
+A small toolchain that turns each project's `.STATUS` file into a **queryable registry** and a **live research
+board** in Obsidian, with a contract that keeps every project well-formed.
+
+## Pipeline
+
+```{mermaid}
+flowchart LR
+    S[".STATUS<br/>(per project)"] -->|"atlas sync --research"| A["atlas registry<br/>+ atlas doctor"]
+    A --> L["project list --kind / --json"]
+    A --> M["MCP atlas_get_projects"]
+    M -->|"obs research board"| V["Obsidian vault<br/>research board"]
+```
+
+## Tools
+
+| Tool | Role |
+|------|------|
+| [**atlas**](https://github.com/Data-Wise/atlas) | Registry engine + auditor — `atlas doctor`, `project list --kind`, research-safe sync |
+| [**obsidian-cli-ops**](https://github.com/Data-Wise/obsidian-cli-ops) | Renders a deterministic research board from the atlas registry into the vault |
+| [**docs-standards**](https://github.com/Data-Wise/docs-standards) | The Project Settings Contract + architecture decision records |
+
+## How it works
+
+- **Tag** a manuscript or program in its `.STATUS` (`kind:`, `target:`/`venue:`, and a `tasks:` block for programs).
+- **Sync** — `atlas sync --research` parses it into the registry; `atlas doctor` audits the settings contract
+  (`.STATUS` / `CLAUDE.md` / `.obs/sync.yml`) across every project.
+- **Render** — `obs research board` draws manuscripts, programs, venues, deadlines, and next-actions into an
+  Obsidian board, refreshed deterministically from the registry.
+
+## Learn more
+
+- atlas documentation: <https://data-wise.github.io/atlas/> (registry, cookbook, architecture, MCP)
+- [Research-ops overview](https://github.com/Data-Wise/docs-standards/blob/main/research-ops/overview.md) —
+  cross-tool ownership map and ADRs.
+
+*Open source. Built for an ADHD-friendly, reproducible research workflow.*

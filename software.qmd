@@ -76,6 +76,8 @@ medci(mu.x = 0.5, mu.y = 0.3,
 - [**atlas**](https://github.com/Data-Wise/atlas) — project-state engine: registry, sessions, and a research dashboard (`atlas doctor`, `project list --kind`)
 - [**obsidian-cli-ops**](https://github.com/Data-Wise/obsidian-cli-ops) — Obsidian vault automation; renders a deterministic research board from atlas state (`obs research board`)
 - [**flow-cli**](https://github.com/Data-Wise/flow-cli) — ADHD-friendly ZSH workflow (`work`, `dash`) over the shared project registry
+
+Together, atlas + obsidian-cli-ops form a **[Research-Ops Platform](research-ops.qmd)** — `.STATUS` → registry → live Obsidian board.
 - [**emacs-r-devkit**](https://github.com/Data-Wise/emacs-r-devkit) — Emacs configuration for R development
 - [**docs-standards**](https://github.com/Data-Wise/docs-standards) — Shared documentation standards
 
