@@ -1,0 +1,84 @@
+# data-wise.github.io — Claude Code task list
+
+Scoped handoff from a Cowork session (2026-07-03). Context: personal academic site refresh +
+research-priority guardrail. Repo-level / render-requiring work only — simple content edits
+(research.qmd, publications.qmd, software.qmd status fixes) were handled directly in Cowork.
+
+**Guardrail (apply to every task below):** the public site shows research **topics only**.
+Never surface manuscript-level specifics — target venue, revision round, draft %, submission
+timing — anywhere on data-wise.github.io. Link a preprint only once it is actually posted to
+arXiv. If a task below would require pulling live `.STATUS`/atlas data onto the site, add a
+field-level filter that strips venue/round/% before render.
+
+---
+
+## 1. Dev-tools showcase page
+
+- [ ] New `dev-tools.qmd` (or expand `software.qmd`) covering the full hub-and-spoke toolchain:
+      atlas, flow-cli, craft, rforge, scholar, nexus, aiterm, himalaya-mcp, scribe-sw, dtslides,
+      homebrew-tap. Current site only lists 5 of 11.
+- [ ] One-line description + GitHub badge per tool, pulled from each repo's README/CLAUDE.md
+      (read root `~/projects/dev-tools/CLAUDE.md` first for the canonical list/descriptions).
+- [ ] Add to `_quarto.yml` navbar.
+
+## 2. MediationVerse status table — make it accurate, not hand-typed
+
+- [ ] Fix `software.qmd` package table: medfit is P0/CRAN-bound (not "Development"), probmed is
+      P1 (not "Stable"). Source of truth: `~/projects/r-packages/active/*/​.STATUS` or rforge
+      `status`/`health` output — do NOT invent labels.
+- [ ] Decide: hand-maintained table (simple, can drift) vs. a small build step that reads
+      `.STATUS` per package and generates the table at render time. If the latter, this is where
+      the guardrail matters — package CRAN/dev status is fine to publish, just don't let any
+      manuscript-adjacent fields ride along if the same script ever touches research data.
+
+## 3. Publications page overhaul
+
+- [ ] Replace `YOUR_ID` placeholder Google Scholar link with the real ID
+      (hzQ60YcAAAAJ — already correct elsewhere on the site).
+- [ ] Populate Sensitivity Analysis / Mixed-Effects Models / Prevention Science / Health Research
+      placeholder comments with actual publications (pull from Google Scholar or CV).
+- [ ] Keep "Working Papers" section topic-only, as-is — this is the correct pattern, don't add
+      status detail when filling it in further.
+
+## 4. Real photo + logo
+
+- [ ] Replace `assets/profile-placeholder.svg` and `assets/logo-placeholder.svg` with final
+      assets. Lowest-effort, highest-credibility fix on the list.
+- [ ] Add downloadable CV at `assets/cv.pdf`, link from index.qmd.
+
+## 5. atlas / research-ops leak guard (repo work, not just content)
+
+- [ ] Audit `research-ops.qmd` and any future pipeline that renders atlas registry data onto the
+      public site (`obs research board` is vault-only today — confirm it stays that way).
+- [ ] If/when any public-facing render ever consumes atlas registry data, add an explicit
+      allowlist (topic tags, kind) rather than a denylist — safer default than trying to
+      enumerate every sensitive field.
+- [ ] Document the rule in this repo's `CLAUDE.md` so it isn't re-litigated per session: public
+      site = topics + arXiv-posted papers only, never `.STATUS` venue/round/% fields.
+
+## 6. Design pass (optional, do last)
+
+- [ ] Render current site, run `design:design-critique` or the `frontend-design` plugin against
+      screenshots for a warm-academic theme critique.
+- [ ] If pursuing the Figma round-trip: capture the rendered site into Figma frames, iterate on
+      layout/typography there, hand back for SCSS implementation. Skip if a direct SCSS/theme-
+      factory pass gets you far enough — Figma round-trip is likely overkill for a Quarto site.
+
+---
+
+## Suggested order
+
+1 (assets) → 3 (fix placeholder ID, low effort) → 2 (status fix) → 1 (dev-tools page) →
+5 (guard rule, do before any pipeline work expands) → 6 (design, optional/last)
+
+## Commands
+
+```bash
+cd ~/projects/dev-tools/data-wise.github.io
+quarto preview        # local dev
+quarto render          # build _site/
+git checkout -b feature/site-refresh
+# ...edits...
+git add -A && git commit -m "..."
+git push               # auto-deploys via GitHub Actions
+```
