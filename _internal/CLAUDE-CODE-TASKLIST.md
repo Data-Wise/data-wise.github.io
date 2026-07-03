@@ -43,6 +43,16 @@ field-level filter that strips venue/round/% before render.
 
 ## 3. Publications page overhaul
 
+- [x] **New, added after original scope**: build `scripts/sync_publications.py` — auto-syncs a
+      "Full Publication List" section from the public ORCID API (`0000-0001-8523-7776`) + Crossref
+      metadata, wired as a Quarto pre-render hook. Excludes retracted papers via Crossref's
+      `update-to` field plus a manual denylist (defense-in-depth — none currently populated, but
+      the mechanism exists for whenever a specific DOI is identified). See the "Publication
+      integrity guardrail" section in `CLAUDE.md` for the enforcement details. Replaces the
+      manual Scholar-fetch-and-curate approach used for the section below going forward for new
+      publications; the hand-curated "Selected Publications" sections stay as-is (editorial
+      categorization isn't something ORCID metadata alone can drive).
+
 - [x] Replace `YOUR_ID` placeholder Google Scholar link with the real ID
       (hzQ60YcAAAAJ — already correct elsewhere on the site).
       — Done via PR #5.
