@@ -6,6 +6,17 @@ Context: follow-up to the manual Scholar-fetch-and-curate pass used to populate
 `CLAUDE-CODE-TASKLIST.md` item 3). This note evaluates whether a deterministic
 tool/script could replace that agent-driven approach going forward.
 
+**Update, same day**: the top recommendation below (ORCID + doi.org pre-render
+script) was implemented as `scripts/sync_publications.py`. It also gained a
+requirement not anticipated in the original research: retraction filtering
+(some collaboration papers on the author's record have been retracted).
+Implementation added a Crossref `update-to` check plus a manual denylist —
+see the "Publication integrity guardrail" section in `CLAUDE.md`. One real
+Quarto limitation surfaced during implementation: full-project `quarto
+render` resolves `{{< include >}}` directives *before* running `project:
+pre-render` scripts, so the generated file must be committed to the repo as
+a baseline (not gitignored) or a fresh checkout's first render fails.
+
 ## Existing automation already in place
 
 `.github/workflows/publish.yml` — GitHub Actions deploy to Pages, triggered on

@@ -48,6 +48,16 @@ title: "Publications"
 
 ---
 
+## Full Publication List (Auto-Synced)
+
+*Automatically generated from [ORCID](https://orcid.org/0000-0001-8523-7776) at
+build time — see `scripts/sync_publications.py`. Entries with a retraction
+notice on Crossref are excluded automatically.*
+
+{{< include /_generated/orcid-publications.md >}}
+
+---
+
 ## Working Papers
 
 - Sequential mediation analysis with multiple mediators

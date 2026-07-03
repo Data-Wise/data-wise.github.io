@@ -2,6 +2,12 @@
 /_site/
 /.quarto/
 
+# NOTE: _generated/ (from scripts/sync_publications.py) is intentionally
+# tracked, not ignored. Quarto's full-project render resolves {{< include >}}
+# directives before running project pre-render scripts, so the file must
+# already exist on a fresh checkout or the build fails. pre-render refreshes
+# it on every render; the committed copy is just the fallback baseline.
+
 # OS
 .DS_Store
 
