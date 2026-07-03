@@ -24,8 +24,8 @@ library(mediationverse)
 | Package | Description | Status |
 |---------|-------------|--------|
 | [**mediationverse**](https://github.com/Data-Wise/mediationverse) | Meta-package (loads all) | Development |
-| [**medfit**](https://github.com/Data-Wise/medfit) | Model fitting & extraction | Development |
-| [**probmed**](https://github.com/Data-Wise/probmed) | P_med effect sizes | Stable |
+| [**medfit**](https://github.com/Data-Wise/medfit) | Model fitting & extraction | CRAN-bound (P1) |
+| [**probmed**](https://github.com/Data-Wise/probmed) | P_med effect sizes | Active development (P1) |
 | [**RMediation**](https://cran.r-project.org/package=RMediation) | Confidence intervals | [![CRAN](https://www.r-pkg.org/badges/version/RMediation)](https://cran.r-project.org/package=RMediation) |
 | [**medrobust**](https://github.com/Data-Wise/medrobust) | Sensitivity analysis | Development |
 | [**medsim**](https://github.com/Data-Wise/medsim) | Simulation infrastructure | Development |
@@ -73,13 +73,26 @@ medci(mu.x = 0.5, mu.y = 0.3,
 
 ## Other Tools
 
-- [**atlas**](https://github.com/Data-Wise/atlas) — project-state engine: registry, sessions, and a research dashboard (`atlas doctor`, `project list --kind`)
-- [**obsidian-cli-ops**](https://github.com/Data-Wise/obsidian-cli-ops) — Obsidian vault automation; renders a deterministic research board from atlas state (`obs research board`)
-- [**flow-cli**](https://github.com/Data-Wise/flow-cli) — ADHD-friendly ZSH workflow (`work`, `dash`) over the shared project registry
+A hub-and-spoke toolchain for research and development workflows: [**atlas**](https://github.com/Data-Wise/atlas) is the state hub (projects, sessions, captures); [**flow-cli**](https://github.com/Data-Wise/flow-cli) is the fast shell wrapper around it; the rest are independent spokes.
+
+| Tool | Description | Language |
+|------|-------------|----------|
+| [**atlas**](https://github.com/Data-Wise/atlas) | State engine hub: projects, sessions, captures, breadcrumbs (`atlas doctor`, `project list --kind`) | Node.js |
+| [**flow-cli**](https://github.com/Data-Wise/flow-cli) | Fast (<10ms) ZSH shell wrapper for atlas; ADHD-optimized commands (`work`, `dash`) | ZSH |
+| [**craft**](https://github.com/Data-Wise/craft) | Claude Code plugin: commands, skills, and agents for dev workflows | JS/ZSH plugin |
+| [**rforge**](https://github.com/Data-Wise/rforge) | Claude Code plugin for R-package ecosystem authoring | R + plugin |
+| [**scholar**](https://github.com/Data-Wise/scholar) | Claude plugin for statistical teaching (exams, quizzes, slides, lectures, courses) | Claude plugin |
+| [**nexus-cli**](https://github.com/Data-Wise/nexus-cli) | Knowledge-workflow CLI for academic researchers | Python |
+| [**aiterm**](https://github.com/Data-Wise/aiterm) | AI terminal optimizer CLI for Claude Code / OpenCode / Gemini CLI | Node.js |
+| [**obsidian-cli-ops**](https://github.com/Data-Wise/obsidian-cli-ops) | Obsidian vault automation; renders a deterministic research board from atlas state (`obs research board`) | Python/Node |
+| [**himalaya-mcp**](https://github.com/Data-Wise/himalaya-mcp) | MCP server wrapping the himalaya email CLI | TypeScript |
+| [**scribe-sw**](https://github.com/Data-Wise/scribe-sw) | Distraction-free writer (macOS-native rewrite of `scribe`) | Swift |
+| [**dtslides**](https://github.com/Data-Wise/dtslides) | reveal.js presentation themes | Quarto extension |
+| [**homebrew-tap**](https://github.com/Data-Wise/homebrew-tap) | `brew tap data-wise/tap` — distributes the above tools | Ruby |
+| [**emacs-r-devkit**](https://github.com/Data-Wise/emacs-r-devkit) | Emacs configuration for R development | Emacs Lisp |
+| [**docs-standards**](https://github.com/Data-Wise/docs-standards) | Shared documentation standards | Docs |
 
 Together, atlas + obsidian-cli-ops form a **[Research-Ops Platform](research-ops.qmd)** — `.STATUS` → registry → live Obsidian board.
-- [**emacs-r-devkit**](https://github.com/Data-Wise/emacs-r-devkit) — Emacs configuration for R development
-- [**docs-standards**](https://github.com/Data-Wise/docs-standards) — Shared documentation standards
 
 ---
 

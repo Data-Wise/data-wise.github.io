@@ -25,6 +25,15 @@ Methods to assess robustness of findings:
 - Monte Carlo approaches for complex models
 - E-values and other sensitivity metrics
 
+### Current Research Directions
+
+Active methodological threads (topic-level; preprints linked here once posted to arXiv):
+
+- **Noncollapsibility in causal mediation** — distributional properties of mediated effects
+- **Collider and selection bias** in causal mediation analysis
+- **Sequential and longitudinal mediation** with time-varying treatments and mediators
+- **Sensitivity analysis** for causal mediation under unmeasured confounding
+
 ### Advanced Statistical Modeling
 
 - **Generalized linear mixed-effects models**

@@ -1,0 +1,31 @@
+# Data-Wise GitHub Pages
+
+## Status: Active
+## Progress: 75
+## Focus: Personal/organization documentation site
+
+## Overview
+GitHub Pages site for Data-Wise organization and personal portfolio.
+
+## Done (2026-07-03)
+- Dev-tools showcase expanded (5 → 14 tools) on software.qmd
+- MediationVerse status table corrected against .STATUS source of truth
+- Publications page: Scholar ID fixed, all 4 placeholder sections populated
+- Content guardrail (no manuscript-level specifics) documented in CLAUDE.md
+- Internal docs (_internal/) moved out of Quarto's render scope — was leaking
+  unlinked-but-public HTML pages
+- scripts/sync_publications.py: ORCID + Crossref-based auto-sync for
+  publications, with retraction filtering (hard requirement — see CLAUDE.md
+  "Publication integrity guardrail")
+- Dropbox /CV reorganized: canonical CV identified (cv_Tofighi.pdf, LaTeX
+  build), stale drafts archived, NIH + NSF biosketches drafted from real CV
+  data at /CV/biosketches/
+
+## Next
+- Item 4 (blocked on you): real photo/logo/CV PDF assets for the site
+  (candidate photo found: ~/Documents/davood_pic.jpg; no usable logo exists
+  anywhere yet — needs creating)
+- Optional: fix the flagged software.qmd "Other Tools" table crowding (14
+  rows, some names wrap awkwardly) — not urgent
+- Optional: enter the drafted NIH/NSF biosketch content into SciENcv when
+  next needed for an actual submission
