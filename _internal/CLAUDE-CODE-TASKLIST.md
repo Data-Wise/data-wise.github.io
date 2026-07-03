@@ -4,6 +4,11 @@ Scoped handoff from a Cowork session (2026-07-03). Context: personal academic si
 research-priority guardrail. Repo-level / render-requiring work only — simple content edits
 (research.qmd, publications.qmd, software.qmd status fixes) were handled directly in Cowork.
 
+**Related but out-of-scope work done the same day**: Dropbox `/CV` was audited and reorganized
+(canonical CV identified, stale drafts archived, NIH/NSF biosketches drafted from real CV data at
+`/CV/biosketches/`). Not part of this repo — see `.STATUS` "Done" section for the summary; full
+detail is in chat history, not duplicated here since it doesn't touch this codebase.
+
 **Guardrail (apply to every task below):** the public site shows research **topics only**.
 Never surface manuscript-level specifics — target venue, revision round, draft %, submission
 timing — anywhere on data-wise.github.io. Link a preprint only once it is actually posted to
@@ -119,8 +124,23 @@ field-level filter that strips venue/round/% before render.
 cd ~/projects/dev-tools/data-wise.github.io
 quarto preview        # local dev
 quarto render          # build _site/
-git checkout -b feature/site-refresh
+```
+
+**Branch model** (multi-branch, adopted 2026-07-03): `main` (PR-only, protected) ← `dev`
+(integration) ← `feature/*` (new code/script files only — branch-guard blocks new code files
+directly on `dev`, but existing-file edits and any `.md` are fine on `dev` directly). Deploy
+(`.github/workflows/publish.yml`) triggers **only on push to `main`** — merging a PR into `dev`
+does not deploy; `dev` → `main` is a separate release PR.
+
+```bash
+# Editing existing files / any .md — direct on dev:
+git checkout dev && git pull
 # ...edits...
-git add -A && git commit -m "..."
-git push               # auto-deploys via GitHub Actions
+git add -A && git commit -m "..." && git push
+
+# New code file (e.g. a script) — needs a feature branch:
+git checkout -b feature/<name> dev
+# ...edits...
+git push -u origin feature/<name>
+gh pr create --base dev --head feature/<name>
 ```
