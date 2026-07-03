@@ -23,12 +23,12 @@ library(mediationverse)
 
 | Package | Description | Status |
 |---------|-------------|--------|
-| [**mediationverse**](https://github.com/Data-Wise/mediationverse) | Meta-package (loads all) | Development |
-| [**medfit**](https://github.com/Data-Wise/medfit) | Model fitting & extraction | CRAN-bound (P1) |
-| [**probmed**](https://github.com/Data-Wise/probmed) | P_med effect sizes | Active development (P1) |
+| [**mediationverse**](https://github.com/Data-Wise/mediationverse) | Meta-package (loads all) | <span class="pill dev"><span class="dot"></span>Development</span> |
+| [**medfit**](https://github.com/Data-Wise/medfit) | Model fitting & extraction | <span class="pill cran"><span class="dot"></span>CRAN-bound (P1)</span> |
+| [**probmed**](https://github.com/Data-Wise/probmed) | P_med effect sizes | <span class="pill active"><span class="dot"></span>Active dev (P1)</span> |
 | [**RMediation**](https://cran.r-project.org/package=RMediation) | Confidence intervals | [![CRAN](https://www.r-pkg.org/badges/version/RMediation)](https://cran.r-project.org/package=RMediation) |
-| [**medrobust**](https://github.com/Data-Wise/medrobust) | Sensitivity analysis | Development |
-| [**medsim**](https://github.com/Data-Wise/medsim) | Simulation infrastructure | Development |
+| [**medrobust**](https://github.com/Data-Wise/medrobust) | Sensitivity analysis | <span class="pill dev"><span class="dot"></span>Development</span> |
+| [**medsim**](https://github.com/Data-Wise/medsim) | Simulation infrastructure | <span class="pill dev"><span class="dot"></span>Development</span> |
 
 ### Quick Example
 
@@ -75,22 +75,51 @@ medci(mu.x = 0.5, mu.y = 0.3,
 
 A hub-and-spoke toolchain for research and development workflows: [**atlas**](https://github.com/Data-Wise/atlas) is the state hub (projects, sessions, captures); [**flow-cli**](https://github.com/Data-Wise/flow-cli) is the fast shell wrapper around it; the rest are independent spokes.
 
-| Tool | Description | Language |
-|------|-------------|----------|
-| [**atlas**](https://github.com/Data-Wise/atlas) | State engine hub: projects, sessions, captures, breadcrumbs (`atlas doctor`, `project list --kind`) | Node.js |
-| [**flow-cli**](https://github.com/Data-Wise/flow-cli) | Fast (<10ms) ZSH shell wrapper for atlas; ADHD-optimized commands (`work`, `dash`) | ZSH |
-| [**craft**](https://github.com/Data-Wise/craft) | Claude Code plugin: commands, skills, and agents for dev workflows | JS/ZSH plugin |
-| [**rforge**](https://github.com/Data-Wise/rforge) | Claude Code plugin for R-package ecosystem authoring | R + plugin |
-| [**scholar**](https://github.com/Data-Wise/scholar) | Claude plugin for statistical teaching (exams, quizzes, slides, lectures, courses) | Claude plugin |
-| [**nexus-cli**](https://github.com/Data-Wise/nexus-cli) | Knowledge-workflow CLI for academic researchers | Python |
-| [**aiterm**](https://github.com/Data-Wise/aiterm) | AI terminal optimizer CLI for Claude Code / OpenCode / Gemini CLI | Node.js |
-| [**obsidian-cli-ops**](https://github.com/Data-Wise/obsidian-cli-ops) | Obsidian vault automation; renders a deterministic research board from atlas state (`obs research board`) | Python/Node |
-| [**himalaya-mcp**](https://github.com/Data-Wise/himalaya-mcp) | MCP server wrapping the himalaya email CLI | TypeScript |
-| [**scribe-sw**](https://github.com/Data-Wise/scribe-sw) | Distraction-free writer (macOS-native rewrite of `scribe`) | Swift |
-| [**dtslides**](https://github.com/Data-Wise/dtslides) | reveal.js presentation themes | Quarto extension |
-| [**homebrew-tap**](https://github.com/Data-Wise/homebrew-tap) | `brew tap data-wise/tap` — distributes the above tools | Ruby |
-| [**emacs-r-devkit**](https://github.com/Data-Wise/emacs-r-devkit) | Emacs configuration for R development | Emacs Lisp |
-| [**docs-standards**](https://github.com/Data-Wise/docs-standards) | Shared documentation standards | Docs |
+::: {.tool-group}
+::: {.tool-group-label}
+Hub & Spoke Core
+:::
+::: {.tool-grid}
+<div class="tool-card"><i class="bi bi-diagram-3"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/atlas">atlas</a></span><span class="tool-desc">State engine hub: projects, sessions, captures, breadcrumbs (<code>atlas doctor</code>, <code>project list --kind</code>)</span><span class="tool-lang">Node.js</span></div></div>
+<div class="tool-card"><i class="bi bi-diagram-3"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/flow-cli">flow-cli</a></span><span class="tool-desc">Fast (&lt;10ms) ZSH shell wrapper for atlas; ADHD-optimized commands (<code>work</code>, <code>dash</code>)</span><span class="tool-lang">ZSH</span></div></div>
+<div class="tool-card"><i class="bi bi-diagram-3"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/obsidian-cli-ops">obsidian-cli-ops</a></span><span class="tool-desc">Obsidian vault automation; renders a deterministic research board from atlas state (<code>obs research board</code>)</span><span class="tool-lang">Python/Node</span></div></div>
+:::
+:::
+
+::: {.tool-group}
+::: {.tool-group-label}
+Claude Code Plugins
+:::
+::: {.tool-grid}
+<div class="tool-card"><i class="bi bi-puzzle"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/craft">craft</a></span><span class="tool-desc">Claude Code plugin: commands, skills, and agents for dev workflows</span><span class="tool-lang">JS/ZSH plugin</span></div></div>
+<div class="tool-card"><i class="bi bi-puzzle"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/rforge">rforge</a></span><span class="tool-desc">Claude Code plugin for R-package ecosystem authoring</span><span class="tool-lang">R + plugin</span></div></div>
+<div class="tool-card"><i class="bi bi-puzzle"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/scholar">scholar</a></span><span class="tool-desc">Claude plugin for statistical teaching (exams, quizzes, slides, lectures, courses)</span><span class="tool-lang">Claude plugin</span></div></div>
+<div class="tool-card"><i class="bi bi-puzzle"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/himalaya-mcp">himalaya-mcp</a></span><span class="tool-desc">MCP server wrapping the himalaya email CLI</span><span class="tool-lang">TypeScript</span></div></div>
+:::
+:::
+
+::: {.tool-group}
+::: {.tool-group-label}
+Standalone CLIs & Apps
+:::
+::: {.tool-grid}
+<div class="tool-card"><i class="bi bi-terminal"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/nexus-cli">nexus-cli</a></span><span class="tool-desc">Knowledge-workflow CLI for academic researchers</span><span class="tool-lang">Python</span></div></div>
+<div class="tool-card"><i class="bi bi-terminal"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/aiterm">aiterm</a></span><span class="tool-desc">AI terminal optimizer CLI for Claude Code / OpenCode / Gemini CLI</span><span class="tool-lang">Node.js</span></div></div>
+<div class="tool-card"><i class="bi bi-terminal"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/scribe-sw">scribe-sw</a></span><span class="tool-desc">Distraction-free writer (macOS-native rewrite of <code>scribe</code>)</span><span class="tool-lang">Swift</span></div></div>
+:::
+:::
+
+::: {.tool-group}
+::: {.tool-group-label}
+Distribution & Docs
+:::
+::: {.tool-grid}
+<div class="tool-card"><i class="bi bi-box-seam"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/dtslides">dtslides</a></span><span class="tool-desc">reveal.js presentation themes</span><span class="tool-lang">Quarto extension</span></div></div>
+<div class="tool-card"><i class="bi bi-box-seam"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/homebrew-tap">homebrew-tap</a></span><span class="tool-desc"><code>brew tap data-wise/tap</code> — distributes the above tools</span><span class="tool-lang">Ruby</span></div></div>
+<div class="tool-card"><i class="bi bi-box-seam"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/emacs-r-devkit">emacs-r-devkit</a></span><span class="tool-desc">Emacs configuration for R development</span><span class="tool-lang">Emacs Lisp</span></div></div>
+<div class="tool-card"><i class="bi bi-box-seam"></i><div class="tool-body"><span class="tool-name"><a href="https://github.com/Data-Wise/docs-standards">docs-standards</a></span><span class="tool-desc">Shared documentation standards</span><span class="tool-lang">Docs</span></div></div>
+:::
+:::
 
 Together, atlas + obsidian-cli-ops form a **[Research-Ops Platform](research-ops.qmd)** — `.STATUS` → registry → live Obsidian board.
 

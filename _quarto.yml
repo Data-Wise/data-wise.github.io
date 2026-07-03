@@ -11,7 +11,7 @@ website:
   
   navbar:
     background: dark
-    logo: "assets/logo-placeholder.svg"
+    logo: "assets/logo.svg"
     title: "Davood Tofighi"
     left:
       - text: Home
@@ -37,8 +37,18 @@ website:
 
 format:
   html:
+    # Active theme: causal-graph.scss (DAG node/edge motif). Two built-but-
+    # dormant alternates exist and are fully wired against the same content
+    # classes — switch by changing the two lines below:
+    #   field-notes.scss   — empirical-notebook, monospace, grid paper
+    #   journal-serif.scss — single serif family, stats-journal typesetting
+    #     NOTE: journal-serif.scss uses a LIGHT navbar ($paper bg, dark ink
+    #     text) — also change `navbar: background: dark` to `light` above
+    #     if you switch to it, or the navbar text will be unreadable.
+    #   warm-academic.scss — the original cream/terracotta theme, still
+    #     present in the repo (unreferenced, not deleted), superseded 2026-07-03
     theme:
-      light: [default, warm-academic.scss]
-      dark: [darkly, warm-academic.scss]
+      light: [default, causal-graph.scss]
+      dark: [darkly, causal-graph.scss]
     toc: true
     code-copy: true

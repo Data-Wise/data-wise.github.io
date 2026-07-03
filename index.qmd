@@ -17,6 +17,20 @@ pagetitle: "Davood Tofighi"
 [Causal inference · Mediation analysis · Statistical methodology · Health data science]{.tagline}
 :::
 
+<div class="dag-accent" aria-hidden="true">
+  <svg width="140" height="90" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
+    <line x1="20" y1="70" x2="70" y2="20" class="dag-edge"/>
+    <line x1="70" y1="20" x2="120" y2="70" class="dag-edge"/>
+    <line x1="20" y1="70" x2="120" y2="70" class="dag-edge dag-edge-direct"/>
+    <circle cx="20" cy="70" r="9" class="dag-node dag-node-x"/>
+    <text x="20" y="74" text-anchor="middle" class="dag-label">X</text>
+    <circle cx="70" cy="20" r="9" class="dag-node dag-node-m"/>
+    <text x="70" y="24" text-anchor="middle" class="dag-label">M</text>
+    <circle cx="120" cy="70" r="9" class="dag-node dag-node-y"/>
+    <text x="120" y="74" text-anchor="middle" class="dag-label">Y</text>
+  </svg>
+</div>
+
 :::
 
 ::: {.highlight-box}
@@ -34,11 +48,11 @@ My research centers on developing methods that amplify the **replicability of st
 - **Machine learning** applications in health research
 
 ::: {.quick-links}
-[📊 Research](research.qmd)
-[📦 Software](software.qmd)
-[📝 Publications](publications.qmd)
-[🎓 Teaching](teaching.qmd)
-[🏛️ UNM Profile](https://math.unm.edu/people/academic-personnel/davood-tofighi)
+[<i class="bi bi-graph-up"></i> Research](research.qmd)
+[<i class="bi bi-box-seam"></i> Software](software.qmd)
+[<i class="bi bi-journal-text"></i> Publications](publications.qmd)
+[<i class="bi bi-mortarboard"></i> Teaching](teaching.qmd)
+[<i class="bi bi-bank"></i> UNM Profile](https://math.unm.edu/people/academic-personnel/davood-tofighi)
 :::
 
 ## Applied Research
@@ -72,8 +86,8 @@ pak::pak("data-wise/mediationverse")
 
 ## Contact
 
-📧 <a href="#" id="email-link">Enable JavaScript to see email</a>  
-🏢 Office: SMLC 228
+<i class="bi bi-envelope"></i> <a href="#" id="email-link">Enable JavaScript to see email</a><br>
+<i class="bi bi-building"></i> Office: SMLC 228
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

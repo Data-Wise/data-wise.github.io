@@ -1,0 +1,341 @@
+/*-- scss:defaults --*/
+
+// Field Notes palette — empirical-research notebook: faint grid paper,
+// monospace utility voice, a "pencil red" annotation accent.
+$paper: #eef1f0;
+$ink: #1f3a5f;
+$pencil: #a83a2e;
+$sage: #5c7d63;
+$text: #2b2e2c;
+$card: #ffffff;
+
+// Apply colors
+$body-bg: $paper;
+$body-color: $text;
+$primary: $ink;
+$secondary: $pencil;
+$link-color: $ink;
+
+// Navbar
+$navbar-bg: $ink;
+$navbar-fg: $paper;
+
+// Fonts — serif for reading prose, monospace as a first-class structural
+// voice (nav, labels, taglines) rather than code-only. Different pairing
+// logic than warm-academic's serif+sans or causal-graph's serif+sans.
+$font-family-sans-serif: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+$headings-font-family: Georgia, "Charter", serif;
+
+/*-- scss:rules --*/
+
+body {
+  background-color: $paper;
+  background-image:
+    linear-gradient(rgba($ink, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($ink, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.navbar {
+  background-color: $ink !important;
+  padding: 0.5rem 1rem;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+
+  .navbar-brand {
+    font-weight: 700;
+    color: $paper !important;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-link {
+    color: rgba($paper, 0.85) !important;
+
+    &:hover {
+      color: $pencil !important;
+    }
+  }
+}
+
+.logo-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: $paper;
+  color: $ink;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 2px solid $pencil;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.bio-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px dashed rgba($ink, 0.35);
+  margin-bottom: 2rem;
+}
+
+.bio-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid $pencil;
+  flex-shrink: 0;
+}
+
+.bio-text {
+  h1 {
+    font-family: $headings-font-family;
+    color: $ink;
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    color: $sage;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .institution {
+    display: block;
+    color: $text;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    font-family: ui-monospace, monospace;
+
+    &:hover {
+      color: $pencil;
+    }
+  }
+
+  .tagline {
+    color: lighten($text, 15%);
+    font-size: 0.85rem;
+    font-family: ui-monospace, monospace;
+  }
+}
+
+// This theme doesn't use the DAG accent graphic — causal-graph-specific.
+.dag-accent {
+  display: none;
+}
+
+a {
+  color: $ink;
+  text-decoration: none;
+
+  &:hover {
+    color: $pencil;
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3 {
+  font-family: $headings-font-family;
+  color: $ink;
+}
+
+h2 {
+  border-bottom: 2px solid $pencil;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-family: ui-monospace, monospace;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px dashed rgba($ink, 0.35);
+  padding-bottom: 0.4rem;
+}
+
+.highlight-box {
+  background-color: $card;
+  border: 1px solid rgba($ink, 0.25);
+  border-left: 4px solid $pencil;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.quick-links {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.75rem;
+    background-color: $card;
+    border: 1px solid rgba($ink, 0.3);
+    border-radius: 2px;
+    color: $ink;
+    font-family: ui-monospace, monospace;
+    font-size: 0.85rem;
+
+    &:hover {
+      border-color: $pencil;
+      color: $pencil;
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-footer {
+  background-color: $ink;
+  color: $paper;
+
+  a {
+    color: $pencil !important;
+  }
+}
+
+.about-entity {
+  .about-image {
+    max-width: 100px !important;
+  }
+}
+
+div.sourceCode {
+  background-color: $card !important;
+  border: 1px solid rgba($ink, 0.25);
+  border-left: 3px solid $pencil;
+  border-radius: 0 4px 4px 0;
+
+  pre {
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
+
+code {
+  color: $pencil;
+  background-color: $card;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+div.sourceCode code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: ui-monospace, monospace;
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  &.cran {
+    background-color: rgba($sage, 0.15);
+    color: darken($sage, 10%);
+    .dot { background-color: $sage; }
+  }
+
+  &.active {
+    background-color: rgba($pencil, 0.12);
+    color: $pencil;
+    .dot { background-color: $pencil; }
+  }
+
+  &.dev {
+    background-color: rgba($text, 0.08);
+    color: $text;
+    .dot { background-color: $text; }
+  }
+}
+
+.tool-group {
+  margin-bottom: 1.5rem;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.tool-group-label {
+  font-family: ui-monospace, monospace;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $pencil;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tool-card {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgba($ink, 0.25);
+  border-radius: 2px;
+  background-color: $card;
+
+  i.bi {
+    color: $ink;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  .tool-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 0;
+  }
+
+  .tool-name {
+    font-weight: 700;
+    color: $pencil;
+    font-size: 0.9rem;
+    font-family: ui-monospace, monospace;
+  }
+
+  .tool-desc {
+    font-size: 0.85rem;
+    color: $text;
+    line-height: 1.4;
+    font-family: Georgia, serif;
+  }
+
+  .tool-lang {
+    font-size: 0.72rem;
+    color: $sage;
+    font-family: ui-monospace, monospace;
+  }
+}
