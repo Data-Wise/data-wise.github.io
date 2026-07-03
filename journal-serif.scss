@@ -1,0 +1,351 @@
+/*-- scss:defaults --*/
+
+// Journal Serif palette — the typesetting register of the stats journals
+// this work is actually published in: single serif family, one oxblood
+// accent, restraint as the personality.
+$paper: #f5f4f1;
+$ink: #1a1a1a;
+$accent: #7a2e2e;
+$rule: #c9c5bc;
+$card: #ffffff;
+
+// Apply colors
+$body-bg: $paper;
+$body-color: $ink;
+$primary: $accent;
+$secondary: $ink;
+$link-color: $accent;
+
+// Navbar
+$navbar-bg: $paper;
+$navbar-fg: $ink;
+
+// Fonts — one serif family for everything; hierarchy comes from size,
+// weight, and italic, not from a second typeface.
+$font-family-sans-serif: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+$headings-font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+
+/*-- scss:rules --*/
+
+body {
+  background-color: $paper;
+}
+
+.navbar {
+  background-color: $paper !important;
+  color: $ink;
+  padding: 0.75rem 1rem;
+  border-bottom: 3px double $ink;
+
+  .navbar-brand {
+    font-weight: 700;
+    color: $ink !important;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-link {
+    color: $ink !important;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+
+    &:hover {
+      color: $accent !important;
+    }
+  }
+}
+
+.logo-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  border: 2px solid $ink;
+  color: $accent;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.bio-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 2.25rem 0 1.5rem;
+  border-bottom: none;
+  margin-bottom: 1.5rem;
+}
+
+.bio-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid $ink;
+  flex-shrink: 0;
+}
+
+.bio-text {
+  h1 {
+    font-family: $headings-font-family;
+    color: $ink;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+  }
+
+  .subtitle {
+    color: $ink;
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .institution {
+    display: block;
+    color: $ink;
+    opacity: 0.75;
+    font-size: 0.88rem;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  .tagline {
+    color: $accent;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+}
+
+.dag-accent {
+  display: none;
+}
+
+a {
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid rgba($accent, 0.4);
+
+  &:hover {
+    color: $ink;
+    border-bottom-color: $ink;
+  }
+}
+
+h1, h2, h3 {
+  font-family: $headings-font-family;
+  color: $ink;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  border-bottom: none;
+  margin-top: 2.5rem;
+  position: relative;
+
+  &::before, &::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: $rule;
+    vertical-align: middle;
+    margin: 0 0.75rem;
+  }
+}
+
+h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.highlight-box {
+  max-width: 62ch;
+  margin: 1.5rem auto;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  text-align: center;
+  background: none;
+  border: none;
+  padding: 0 1rem;
+
+  &::before { content: open-quote; }
+  &::after { content: close-quote; }
+}
+
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $rule;
+
+  a {
+    font-size: 0.85rem;
+    color: $ink;
+    border-bottom: 1px solid $accent;
+    padding-bottom: 1px;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
+
+.nav-footer {
+  background-color: $paper;
+  color: $ink;
+  border-top: 1px solid $rule;
+
+  a {
+    color: $accent !important;
+  }
+}
+
+.about-entity {
+  .about-image {
+    max-width: 100px !important;
+  }
+}
+
+div.sourceCode {
+  background-color: $card !important;
+  border: 1px solid $rule;
+  border-radius: 0;
+
+  pre {
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
+
+code {
+  color: $accent;
+  background-color: $card;
+  padding: 0.1rem 0.3rem;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+div.sourceCode code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  border: 1px solid currentColor;
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  &.cran {
+    color: darken($accent, 5%);
+    .dot { background-color: currentColor; }
+  }
+
+  &.active {
+    color: $accent;
+    .dot { background-color: currentColor; }
+  }
+
+  &.dev {
+    color: rgba($ink, 0.6);
+    .dot { background-color: currentColor; }
+  }
+}
+
+.tool-group {
+  margin-bottom: 1.75rem;
+  text-align: center;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.tool-group-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $accent;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  text-align: left;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tool-card {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid $rule;
+  background-color: $card;
+
+  i.bi {
+    color: $accent;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  .tool-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 0;
+  }
+
+  .tool-name {
+    font-weight: 700;
+    color: $ink;
+    font-size: 0.92rem;
+  }
+
+  .tool-desc {
+    font-size: 0.85rem;
+    color: $ink;
+    opacity: 0.8;
+    line-height: 1.4;
+  }
+
+  .tool-lang {
+    font-size: 0.72rem;
+    font-style: italic;
+    opacity: 0.6;
+  }
+}
