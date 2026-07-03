@@ -255,7 +255,7 @@ gh run list --repo Data-Wise/data-wise.github.io --limit 1
 To continue development in a new chat, say:
 
 > "I'm continuing work on my personal academic website at data-wise.github.io. 
-> Read the context file at ~/projects/dev-tools/data-wise.github.io/WEBSITE-CONTEXT.md 
+> Read the context file at ~/projects/dev-tools/data-wise.github.io/_internal/WEBSITE-CONTEXT.md 
 > to understand the current state."
 
 Or paste this context document directly.

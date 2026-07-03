@@ -7,7 +7,7 @@ Live: https://data-wise.github.io
 - Quarto site (`_quarto.yml`). Pages: `index.qmd`, `research.qmd`, `publications.qmd`, `software.qmd`, `teaching.qmd`.
 - Styling: `custom.scss`, `warm-academic.scss`. Assets (CV, images) in `assets/`.
 - Build output in `_site/` is **generated** — never hand-edit.
-- Richer authoring context lives in `WEBSITE-CONTEXT.md`.
+- Richer authoring context lives in `_internal/WEBSITE-CONTEXT.md`.
 
 ## Working here
 - Preview: `quarto preview`; render: `quarto render`.
