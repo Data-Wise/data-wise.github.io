@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="200" viewBox="0 0 480 200">
+  <rect width="480" height="200" fill="#faf8f5"/>
+
+  <!-- Icon mark -->
+  <g transform="translate(180, 20)">
+    <rect width="120" height="120" rx="18" fill="#78350f"/>
+    <rect x="18" y="67.5" width="13.5" height="22.5" rx="3" fill="#d97706"/>
+    <rect x="39" y="52.5" width="13.5" height="37.5" rx="3" fill="#d97706"/>
+    <rect x="60" y="37.5" width="13.5" height="52.5" rx="3" fill="#d97706"/>
+    <rect x="81" y="22.5" width="13.5" height="67.5" rx="3" fill="#d97706"/>
+    <circle cx="87.75" cy="13.5" r="7.5" fill="#faf8f5"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="240" y="168" text-anchor="middle"
+        font-family="Georgia, 'Playfair Display', serif" font-size="34" font-weight="700"
+        fill="#78350f">Data-Wise</text>
+  <text x="240" y="190" text-anchor="middle"
+        font-family="'Source Sans Pro', -apple-system, sans-serif" font-size="13" letter-spacing="1.5"
+        fill="#3d3d3d">STATISTICS &#183; CAUSAL MEDIATION &#183; DATA SCIENCE</text>
+</svg>

@@ -11,7 +11,7 @@ website:
   
   navbar:
     background: dark
-    logo: "assets/logo-placeholder.svg"
+    logo: "assets/logo.svg"
     title: "Davood Tofighi"
     left:
       - text: Home

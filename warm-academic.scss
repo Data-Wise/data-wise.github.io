@@ -195,10 +195,18 @@ h2 {
   }
 }
 
-// Code blocks
-pre {
-  background-color: #2d2a24;
-  border-radius: 4px;
+// Code blocks — target Quarto's actual div.sourceCode > pre structure;
+// a plain `pre` selector loses to Quarto's own more-specific rule.
+div.sourceCode {
+  background-color: $light-cream !important;
+  border: 1px solid $tan;
+  border-left: 3px solid $gold;
+  border-radius: 0 4px 4px 0;
+
+  pre {
+    background-color: transparent;
+    border-radius: 0;
+  }
 }
 
 code {
@@ -206,4 +214,113 @@ code {
   background-color: $light-cream;
   padding: 0.1rem 0.3rem;
   border-radius: 3px;
+}
+
+div.sourceCode code {
+  background-color: transparent;
+  padding: 0;
+}
+
+// Status pills (package/tool ecosystem status)
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  &.cran {
+    background-color: rgba(47, 111, 78, 0.12);
+    color: #2f6f4e;
+    .dot { background-color: #2f6f4e; }
+  }
+
+  &.active {
+    background-color: rgba($amber, 0.12);
+    color: $amber;
+    .dot { background-color: $amber; }
+  }
+
+  &.dev {
+    background-color: rgba($warm-gray, 0.1);
+    color: $warm-gray;
+    .dot { background-color: $warm-gray; }
+  }
+}
+
+// Grouped tool cards (replaces flat "Other Tools" table)
+.tool-group {
+  margin-bottom: 1.5rem;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.tool-group-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $amber;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tool-card {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid $tan;
+  border-radius: 8px;
+  background-color: $light-cream;
+
+  i.bi {
+    color: $dark-brown;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  .tool-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 0;
+  }
+
+  .tool-name {
+    font-weight: 700;
+    color: $amber;
+    font-size: 0.92rem;
+  }
+
+  .tool-desc {
+    font-size: 0.82rem;
+    color: $warm-gray;
+    opacity: 0.85;
+    line-height: 1.4;
+  }
+
+  .tool-lang {
+    font-size: 0.72rem;
+    color: $warm-gray;
+    opacity: 0.6;
+  }
 }

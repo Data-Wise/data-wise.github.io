@@ -34,11 +34,11 @@ My research centers on developing methods that amplify the **replicability of st
 - **Machine learning** applications in health research
 
 ::: {.quick-links}
-[📊 Research](research.qmd)
-[📦 Software](software.qmd)
-[📝 Publications](publications.qmd)
-[🎓 Teaching](teaching.qmd)
-[🏛️ UNM Profile](https://math.unm.edu/people/academic-personnel/davood-tofighi)
+[<i class="bi bi-graph-up"></i> Research](research.qmd)
+[<i class="bi bi-box-seam"></i> Software](software.qmd)
+[<i class="bi bi-journal-text"></i> Publications](publications.qmd)
+[<i class="bi bi-mortarboard"></i> Teaching](teaching.qmd)
+[<i class="bi bi-bank"></i> UNM Profile](https://math.unm.edu/people/academic-personnel/davood-tofighi)
 :::
 
 ## Applied Research
@@ -72,8 +72,8 @@ pak::pak("data-wise/mediationverse")
 
 ## Contact
 
-📧 <a href="#" id="email-link">Enable JavaScript to see email</a>  
-🏢 Office: SMLC 228
+<i class="bi bi-envelope"></i> <a href="#" id="email-link">Enable JavaScript to see email</a><br>
+<i class="bi bi-building"></i> Office: SMLC 228
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
