@@ -21,14 +21,7 @@ library(mediationverse)
 
 ### Package Ecosystem
 
-| Package | Description | Status |
-|---------|-------------|--------|
-| [**mediationverse**](https://github.com/Data-Wise/mediationverse) | Meta-package (loads all) | <span class="pill dev"><span class="dot"></span>Development</span> |
-| [**medfit**](https://github.com/Data-Wise/medfit) | Model fitting & extraction | <span class="pill cran"><span class="dot"></span>CRAN-bound (P1)</span> |
-| [**probmed**](https://github.com/Data-Wise/probmed) | P_med effect sizes | <span class="pill active"><span class="dot"></span>Active dev (P1)</span> |
-| [**RMediation**](https://cran.r-project.org/package=RMediation) | Confidence intervals | [![CRAN](https://www.r-pkg.org/badges/version/RMediation)](https://cran.r-project.org/package=RMediation) |
-| [**medrobust**](https://github.com/Data-Wise/medrobust) | Sensitivity analysis | <span class="pill dev"><span class="dot"></span>Development</span> |
-| [**medsim**](https://github.com/Data-Wise/medsim) | Simulation infrastructure | <span class="pill dev"><span class="dot"></span>Development</span> |
+{{< include _generated/mediationverse-status.md >}}
 
 ### Quick Example
 

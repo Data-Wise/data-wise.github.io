@@ -307,6 +307,16 @@ div.sourceCode code {
     color: darken($edge, 25%);
     .dot { background-color: $edge; }
   }
+
+  // Dashed border (not a filled background) reads as "in motion, awaiting a
+  // verdict" — distinct from .active's filled treatment without introducing
+  // a new hue outside the existing node/effect/edge trio.
+  &.submitted {
+    background-color: transparent;
+    border: 1.5px dashed $effect;
+    color: darken($effect, 8%);
+    .dot { background-color: $effect; }
+  }
 }
 
 // Grouped tool cards

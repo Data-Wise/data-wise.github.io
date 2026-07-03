@@ -280,6 +280,17 @@ div.sourceCode code {
     color: rgba($ink, 0.6);
     .dot { background-color: currentColor; }
   }
+
+  // This theme's hierarchy comes from weight/italic, not a second hue (see
+  // the font-family comment above) — every other pill inherits the base
+  // italic, so upright + bold is the one combination left to mark "pending
+  // review" without introducing a new color.
+  &.submitted {
+    color: $accent;
+    font-style: normal;
+    font-weight: 700;
+    .dot { background-color: currentColor; }
+  }
 }
 
 .tool-group {
