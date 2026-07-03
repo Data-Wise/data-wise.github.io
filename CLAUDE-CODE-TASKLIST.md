@@ -46,12 +46,17 @@ field-level filter that strips venue/round/% before render.
 - [x] Replace `YOUR_ID` placeholder Google Scholar link with the real ID
       (hzQ60YcAAAAJ — already correct elsewhere on the site).
       — Done via PR #5.
-- [ ] Populate Sensitivity Analysis / Mixed-Effects Models / Prevention Science / Health Research
+- [x] Populate Sensitivity Analysis / Mixed-Effects Models / Prevention Science / Health Research
       placeholder comments with actual publications (pull from Google Scholar or CV).
-      — Blocked: needs the actual publication list from you (Scholar export or CV).
-- [ ] Keep "Working Papers" section topic-only, as-is — this is the correct pattern, don't add
+      — Done by fetching the public Scholar profile (hzQ60YcAAAAJ) directly, no upload needed.
+      Excluded ~16 nanomedicine/drug-delivery papers that appear to be a different "Tofighi"
+      merged into the profile by name collision (unrelated co-author cluster, wrong field) —
+      flagged for you to clean up on Scholar separately. Health Research section includes
+      clinical-collaboration papers (diabetes, toxicology, cardiology, infant development) per
+      your confirmation.
+- [x] Keep "Working Papers" section topic-only, as-is — this is the correct pattern, don't add
       status detail when filling it in further.
-      — Deferred alongside the item above (applies once that content is filled in).
+      — Confirmed unchanged: still topic-only bullets, no status detail added.
 
 ## 4. Real photo + logo
 
@@ -78,11 +83,18 @@ field-level filter that strips venue/round/% before render.
 
 ## 6. Design pass (optional, do last)
 
-- [ ] Render current site, run `design:design-critique` or the `frontend-design` plugin against
+- [x] Render current site, run `design:design-critique` or the `frontend-design` plugin against
       screenshots for a warm-academic theme critique.
+      — Done: rendered locally, screenshotted index/publications/software. Theme is consistent
+      (palette, serif headers, sans body) across pages. One real finding: the 14-row "Other Tools"
+      table on software.qmd is flat/unscannable next to the more legible MediationVerse table above
+      it, and a few compound tool names (dtslides, homebrew-tap, emacs-r-devkit) wrap awkwardly in
+      the narrow first column. Not fixed — flagged for you to decide whether it's worth a follow-up.
 - [ ] If pursuing the Figma round-trip: capture the rendered site into Figma frames, iterate on
       layout/typography there, hand back for SCSS implementation. Skip if a direct SCSS/theme-
       factory pass gets you far enough — Figma round-trip is likely overkill for a Quarto site.
+      — Not pursued: the one finding above doesn't warrant a Figma round-trip; a direct SCSS/
+      table-layout tweak would be enough if you want it fixed.
 
 ---
 

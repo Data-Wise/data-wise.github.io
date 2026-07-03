@@ -14,11 +14,16 @@ title: "Publications"
 
 **Sensitivity Analysis**
 
-<!-- Add sensitivity analysis papers -->
+- **Tofighi, D.**, Hsiao, Y. Y., Kruger, E. S., MacKinnon, D. P., Van Horn, M. L., et al. (2019). Sensitivity analysis of the no-omitted confounder assumption in latent growth curve mediation models. *Structural Equation Modeling: A Multidisciplinary Journal*, 26(1), 94-109.
+- **Tofighi, D.** (2021). Sensitivity analysis in nonrandomized longitudinal mediation analysis. *Frontiers in Psychology*, 12.
+- Kruger, E. S., **Tofighi, D.**, Hsiao, Y. Y., MacKinnon, D. P., Van Horn, M. L., et al. (2022). An R Shiny app for sensitivity analysis for latent growth curve mediation. *Structural Equation Modeling: A Multidisciplinary Journal*.
 
 **Mixed-Effects Models**
 
-<!-- Add multilevel/mixed models papers -->
+- Enders, C. K., & **Tofighi, D.** (2007). Centering predictor variables in cross-sectional multilevel models: A new look at an old issue. *Psychological Methods*, 12(2), 121-138.
+- **Tofighi, D.**, West, S. G., & MacKinnon, D. P. (2013). Multilevel mediation analysis: The effects of omitted variables in the 1-1-1 model. *British Journal of Mathematical and Statistical Psychology*, 66(2), 290-307.
+- **Tofighi, D.**, & Kelley, K. (2016). Assessing omitted confounder bias in multilevel mediation models. *Multivariate Behavioral Research*, 51(2-3), 227-249.
+- **Tofighi, D.** (2010). Multilevel mediation analysis: Statistical assumptions and centering. Doctoral dissertation, Arizona State University.
 
 ### Software Papers
 
@@ -28,11 +33,18 @@ title: "Publications"
 
 **Prevention Science**
 
-<!-- Add prevention science applications -->
+- Witkiewitz, K., Roos, C. R., **Tofighi, D.**, & Van Horn, M. L. (2018). Broad coping repertoire mediates the effect of the combined behavioral intervention on alcohol outcomes in the COMBINE study: An application of latent class mediation. *Journal of Studies on Alcohol and Drugs*, 79(3), 361-370.
+- Hsiao, Y. Y., **Tofighi, D.**, Kruger, E. S., Van Horn, M. L., MacKinnon, D. P., et al. (2019). The (lack of) replication of self-reported mindfulness as a mechanism of change in mindfulness-based relapse prevention for substance use disorders. *Mindfulness*, 10, 1849-1858.
+- Iwamoto, D. K., Kane, J. C., Negi, N. J., Collado, A., & **Tofighi, D.** (2022). Racial discrimination, distress, coping motives, and alcohol-related problems among U.S.-born Asian American young adults. *Asian American Journal of Psychology*, 13(1), 1-10.
+- Herron, J., Hirchak, K. A., Venner, K., **Tofighi, D.**, McDonell, M. G., et al. (2023). Cultural factors and alcohol use in American Indian adults: Results from a culturally tailored contingency management intervention. *Journal of Studies on Alcohol and Drugs*, 84(1), 66-74.
 
 **Health Research**
 
-<!-- Add health/drug delivery papers -->
+- Khan, U. A., Zaidi, S. H., Majeed, H., Lopez, E., **Tofighi, D.**, et al. (2022). Clinical risk factors for infective endocarditis patients with staphylococcus aureus bacteremia and the diagnostic utility of transesophageal echocardiogram. *Current Problems in Cardiology*.
+- Nakatsu, L., Lopez, J. R., Garcia, C. M., Cherian, M., Nash, J., **Tofighi, D.**, Seifert, S. A., et al. (2025). Comparison of two-bag and three-bag acetylcysteine regimens in the treatment of paracetamol poisoning: A systematic review and meta-analysis. *Clinical Toxicology*.
+- Mehrabbeik, A., **Tofighi, D.**, Khalilzadeh, S. H., et al. (2024). Factors associated with achieving HbA1c targets in patients with type 2 diabetes. *Jundishapur Journal of Chronic Disease Care*.
+- Vaccaro, S. M., **Tofighi, D.**, Moss, N., & Rieger, R. A. (2021). The association of infant temperament and maternal sensitivity in preterm and full-term infants. *Infant Mental Health Journal*, 42(6), 806-820.
+- Erickson, S. J., Vaccaro, S., Kubinec, N., Moss, N., Avila-Rieger, R., Lowe, J. R., et al. (2022). Preliminary longitudinal evidence for stability of maternal behavior and infant stress regulation among infants born preterm at 4 and 9 months during the Still Face paradigm. *Infant Behavior and Development*, 66.
 
 ---
 
