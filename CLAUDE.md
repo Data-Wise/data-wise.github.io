@@ -58,4 +58,4 @@ pull from Scholar directly for future publication updates; ORCID + Crossref (as 
 trusted source.
 
 ## Status
-Active (~60%) — personal/organization portfolio + software/teaching showcase.
+Active (~75%) — personal/organization portfolio + software/teaching showcase.
