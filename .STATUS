@@ -20,6 +20,12 @@ GitHub Pages site for Data-Wise organization and personal portfolio.
 - Dropbox /CV reorganized: canonical CV identified (cv_Tofighi.pdf, LaTeX
   build), stale drafts archived, NIH + NSF biosketches drafted from real CV
   data at /CV/biosketches/
+- scripts/sync_mediationverse_status.py: local-only sync (not pre-render —
+  CI can't reach ~/projects/r-packages) that reads cran_state: from each
+  MediationVerse package's .STATUS and regenerates the Package Ecosystem
+  table as _generated/mediationverse-status.md ({{< include >}} in
+  software.qmd). Added a 4th "submitted" pill state across all 3 themes.
+  See docs/specs/SPEC-mediationverse-status-sync-2026-07-03.md.
 
 ## Next
 - Item 4 (blocked on you): real photo/logo/CV PDF assets for the site

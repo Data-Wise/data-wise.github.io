@@ -269,6 +269,15 @@ div.sourceCode code {
     color: $text;
     .dot { background-color: $text; }
   }
+
+  // $ink is already the navbar/link color but unused elsewhere in the pill
+  // set — reusing it here (rather than introducing a new hex) keeps the
+  // fourth state inside this theme's existing three-color vocabulary.
+  &.submitted {
+    background-color: rgba($ink, 0.1);
+    color: $ink;
+    .dot { background-color: $ink; }
+  }
 }
 
 .tool-group {
