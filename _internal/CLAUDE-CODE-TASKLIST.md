@@ -43,8 +43,13 @@ field-level filter that strips venue/round/% before render.
       `.STATUS` per package and generates the table at render time. If the latter, this is where
       the guardrail matters — package CRAN/dev status is fine to publish, just don't let any
       manuscript-adjacent fields ride along if the same script ever touches research data.
-      — Decided: stayed hand-maintained for now (lowest complexity for a low-churn table); revisit
-      if drift becomes a recurring problem.
+      — Superseded (2026-07-03): drift did recur (medrobust/medfit labels were wrong again), so
+      built `scripts/sync_mediationverse_status.py` — reads a new `cran_state:` field from each
+      package's `.STATUS`, writes `_generated/mediationverse-status.md`, included via
+      `{{< include >}}`. Local-only (not pre-render — CI can't reach `~/projects/r-packages`), run
+      manually, diff reviewed before commit. Guardrail holds: only `status`/`cran_state`/
+      `priority` are read, no manuscript-adjacent fields. See
+      `docs/specs/SPEC-mediationverse-status-sync-2026-07-03.md`.
 
 ## 3. Publications page overhaul
 
@@ -104,7 +109,9 @@ field-level filter that strips venue/round/% before render.
       (palette, serif headers, sans body) across pages. One real finding: the 14-row "Other Tools"
       table on software.qmd is flat/unscannable next to the more legible MediationVerse table above
       it, and a few compound tool names (dtslides, homebrew-tap, emacs-r-devkit) wrap awkwardly in
-      the narrow first column. Not fixed — flagged for you to decide whether it's worth a follow-up.
+      the narrow first column.
+      — Fixed same day (commit 5898cc9): replaced the flat table with 4 grouped tool-card grids
+      (Hub & Spoke Core, Claude Code Plugins, Standalone CLIs & Apps, Distribution & Docs).
 - [ ] If pursuing the Figma round-trip: capture the rendered site into Figma frames, iterate on
       layout/typography there, hand back for SCSS implementation. Skip if a direct SCSS/theme-
       factory pass gets you far enough — Figma round-trip is likely overkill for a Quarto site.
