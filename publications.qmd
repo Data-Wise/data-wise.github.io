@@ -22,7 +22,7 @@ title: "Publications"
 
 - Enders, C. K., & **Tofighi, D.** (2007). Centering predictor variables in cross-sectional multilevel models: A new look at an old issue. *Psychological Methods*, 12(2), 121-138.
 - **Tofighi, D.**, West, S. G., & MacKinnon, D. P. (2013). Multilevel mediation analysis: The effects of omitted variables in the 1-1-1 model. *British Journal of Mathematical and Statistical Psychology*, 66(2), 290-307.
-- **Tofighi, D.**, & Kelley, K. (2016). Assessing omitted confounder bias in multilevel mediation models. *Multivariate Behavioral Research*, 51(2-3), 227-249.
+- **Tofighi, D.**, & Kelley, K. (2016). Assessing omitted confounder bias in multilevel mediation models. *Multivariate Behavioral Research*, 51(1), 86-105.
 - **Tofighi, D.** (2010). Multilevel mediation analysis: Statistical assumptions and centering. Doctoral dissertation, Arizona State University.
 
 ### Software Papers
@@ -33,10 +33,10 @@ title: "Publications"
 
 **Prevention Science**
 
-- Witkiewitz, K., Roos, C. R., **Tofighi, D.**, & Van Horn, M. L. (2018). Broad coping repertoire mediates the effect of the combined behavioral intervention on alcohol outcomes in the COMBINE study: An application of latent class mediation. *Journal of Studies on Alcohol and Drugs*, 79(3), 361-370.
-- Hsiao, Y. Y., **Tofighi, D.**, Kruger, E. S., Van Horn, M. L., MacKinnon, D. P., et al. (2019). The (lack of) replication of self-reported mindfulness as a mechanism of change in mindfulness-based relapse prevention for substance use disorders. *Mindfulness*, 10, 1849-1858.
+- Witkiewitz, K., Roos, C. R., **Tofighi, D.**, & Van Horn, M. L. (2018). Broad coping repertoire mediates the effect of the combined behavioral intervention on alcohol outcomes in the COMBINE study: An application of latent class mediation. *Journal of Studies on Alcohol and Drugs*, 79(2), 199-207.
+- Hsiao, Y. Y., **Tofighi, D.**, Kruger, E. S., Van Horn, M. L., MacKinnon, D. P., et al. (2019). The (lack of) replication of self-reported mindfulness as a mechanism of change in mindfulness-based relapse prevention for substance use disorders. *Mindfulness*, 10(4), 724-736.
 - Iwamoto, D. K., Kane, J. C., Negi, N. J., Collado, A., & **Tofighi, D.** (2022). Racial discrimination, distress, coping motives, and alcohol-related problems among U.S.-born Asian American young adults. *Asian American Journal of Psychology*, 13(1), 1-10.
-- Herron, J., Hirchak, K. A., Venner, K., **Tofighi, D.**, McDonell, M. G., et al. (2023). Cultural factors and alcohol use in American Indian adults: Results from a culturally tailored contingency management intervention. *Journal of Studies on Alcohol and Drugs*, 84(1), 66-74.
+- Herron, J., Hirchak, K. A., Venner, K., **Tofighi, D.**, McDonell, M. G., et al. (2023). Cultural factors and alcohol use in American Indian adults: Results from a culturally tailored contingency management intervention. *Journal of Studies on Alcohol and Drugs*, 84(2), 273-280.
 
 **Health Research**
 
