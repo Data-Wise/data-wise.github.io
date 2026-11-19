@@ -5,7 +5,7 @@ Live: https://data-wise.github.io
 
 ## Stack & layout
 - Quarto site (`_quarto.yml`). Pages: `index.qmd`, `research.qmd`, `publications.qmd`, `software.qmd`, `teaching.qmd`.
-- Styling: `custom.scss`, `warm-academic.scss`. Assets (CV, images) in `assets/`.
+- Styling: active theme `slate-modern.scss` (light only, Inter via Google Fonts); alternates `causal-graph.scss`, `field-notes.scss`, `journal-serif.scss`, `warm-academic.scss`. Assets (CV, images, `avatars/`) in `assets/`.
 - Build output in `_site/` is **generated** — never hand-edit.
 - Richer authoring context lives in `_internal/WEBSITE-CONTEXT.md`.
 

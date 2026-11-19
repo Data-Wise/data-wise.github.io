@@ -37,18 +37,22 @@ website:
 
 format:
   html:
-    # Active theme: causal-graph.scss (DAG node/edge motif). Two built-but-
-    # dormant alternates exist and are fully wired against the same content
-    # classes — switch by changing the two lines below:
+    # Active theme: slate-modern.scss (slate + teal, Inter). Light mode only:
+    # the content classes are styled for a light page. Built-but-dormant
+    # alternates share the same content classes — switch the `light:` line:
+    #   causal-graph.scss  — previous theme (DAG node/edge motif, IBM Plex);
+    #                        pair with `dark: [darkly, causal-graph.scss]`
     #   field-notes.scss   — empirical-notebook, monospace, grid paper
     #   journal-serif.scss — single serif family, stats-journal typesetting
     #     NOTE: journal-serif.scss uses a LIGHT navbar ($paper bg, dark ink
-    #     text) — also change `navbar: background: dark` to `light` above
-    #     if you switch to it, or the navbar text will be unreadable.
-    #   warm-academic.scss — the original cream/terracotta theme, still
-    #     present in the repo (unreferenced, not deleted), superseded 2026-07-03
+    #     text) — also change `navbar: background: dark` to `light` above.
+    #   warm-academic.scss — original cream/terracotta theme (unreferenced)
     theme:
-      light: [default, causal-graph.scss]
-      dark: [darkly, causal-graph.scss]
+      light: [default, slate-modern.scss]
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     toc: true
     code-copy: true
