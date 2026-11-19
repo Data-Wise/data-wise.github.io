@@ -28,12 +28,12 @@ website:
       - icon: github
         href: https://github.com/Data-Wise
       - icon: envelope
-        href: mailto:dtofighi@gmail.com
+        href: mailto:dtofighi@unm.edu
 
   page-footer:
     background: dark
     center: |
-      © 2025 Davood Tofighi · [mediationverse](https://github.com/Data-Wise/mediationverse)
+      © 2026 Davood Tofighi · [mediationverse](https://github.com/Data-Wise/mediationverse) · [Research workflow tools](tools.qmd)
 
 format:
   html:

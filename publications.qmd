@@ -58,11 +58,11 @@ notice on Crossref are excluded automatically.*
 
 ---
 
-## Working Papers
+## Preprints
 
-- Sequential mediation analysis with multiple mediators
-- Sensitivity analysis for causal mediation
-- Machine learning applications in health data
+- **Tofighi, D.** Dimension reduction for the trivariate normal product distribution: An efficient numerical algorithm via conditional expectation. *arXiv:2610.05738*. [arxiv.org/abs/2610.05738](https://arxiv.org/abs/2610.05738)
+
+*Preprints are listed here once posted to arXiv.*
 
 ---
 
