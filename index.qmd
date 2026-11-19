@@ -5,7 +5,7 @@ pagetitle: "Davood Tofighi"
 
 ::: {.bio-section}
 
-![](assets/profile-placeholder.svg){.bio-photo}
+![Davood Tofighi](assets/avatars/avatar-scholar.svg){.bio-photo}
 
 ::: {.bio-text}
 # Davood Tofighi, Ph.D.
